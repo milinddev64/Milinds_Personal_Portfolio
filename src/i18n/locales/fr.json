@@ -1,0 +1,191 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "photos": "Photos",
+    "contact": "Contact",
+    "resume": "CV",
+    "portfolio": "Portfolio"
+  },
+  "hero": {
+    "greeting": "Bonjour! Je suis",
+    "viewWork": "Voir mon travail",
+    "getInTouch": "Me contacter",
+    "viewResume": "Voir le CV",
+    "downloadResume": "Télécharger le CV"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "basedIn": "Basé à {{location}}.",
+    "techIntro": "Voici les technologies avec lesquelles je travaille:",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Outils et autres"
+  },
+  "experience": {
+    "title": "Expérience professionnelle",
+    "subtitle": "Mon parcours professionnel et mes contributions",
+    "present": "Présent",
+    "promoted": "Promu"
+  },
+  "projects": {
+    "title": "Projets en vedette",
+    "subtitle": "Voici quelques-uns de mes projets récents qui mettent en valeur mes compétences et mon expérience.",
+    "liveDemo": "Démo en direct",
+    "github": "GitHub"
+  },
+  "photos": {
+    "title": "Galerie de photos",
+    "subtitle": "Moments de mon parcours—voyages, réalisations et souvenirs",
+    "seeMore": "Voir plus",
+    "allCategories": "Tout",
+    "recentPhotos": "Photos récentes"
+  },
+  "contact": {
+    "title": "Me contacter",
+    "subtitle": "Vous avez une question ou souhaitez travailler ensemble? N'hésitez pas à me contacter!",
+    "cardTitle": "Envoyez-moi un message",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "email": "Email",
+    "emailPlaceholder": "votre.email@exemple.com",
+    "message": "Message",
+    "messagePlaceholder": "Votre message...",
+    "note": "Note: Ce formulaire nécessite une intégration backend. Vous pouvez me contacter directement à",
+    "send": "Envoyer le message",
+    "formAlert": "Ceci est un formulaire UI uniquement. Veuillez l'intégrer avec un service d'email comme EmailJS ou Formspree pour le rendre fonctionnel."
+  },
+  "footer": {
+    "copyright": "© {{year}} {{name}}. Tous droits réservés.",
+    "builtWith": "Construit avec React, TypeScript et Tailwind CSS"
+  },
+  "theme": {
+    "switchToDark": "Passer en mode sombre",
+    "switchToLight": "Passer en mode clair"
+  },
+  "language": {
+    "label": "Langue",
+    "en": "Anglais",
+    "hi": "Hindi",
+    "fr": "Français",
+    "de": "Allemand"
+  },
+  "modal": {
+    "thankYouTitle": "Merci!",
+    "thankYouMessage": "Votre message a été envoyé avec succès. Je vous répondrai bientôt!",
+    "constructionTitle": "En construction",
+    "constructionMessage": "Cette page est actuellement en construction. Veuillez revenir plus tard!",
+    "close": "OK"
+  },
+  "gallery": {
+    "title": "Galerie de photos",
+    "subtitle": "Parcourir toutes mes photos par catégorie",
+    "backToHome": "Retour à l'accueil",
+    "noPhotos": "Aucune photo trouvée dans cette catégorie."
+  },
+  "music": {
+    "nowPlaying": "En cours de lecture"
+  },
+  "data": {
+    "personalInfo": {
+      "name": "Milind Murmu",
+      "title": "Développeur Full Stack",
+      "bio": "Développeur passionné avec une expertise dans la création d'applications web modernes. J'aime créer des solutions élégantes à des problèmes complexes et transformer des idées en réalité grâce au code.",
+      "location": "Jamshedpur, Inde"
+    },
+    "experiences": {
+      "1": {
+        "company": "Infosys Ltd.",
+        "jobTitle": "Programmeur spécialisé",
+        "startDate": "Fév 2025",
+        "description": "Développement d'applications de niveau entreprise et contribution à des solutions web modernes utilisant des technologies de pointe.",
+        "highlightPoints": [],
+        "roles": [
+          {
+            "title": "Programmeur spécialisé",
+            "startDate": "Oct 2025",
+            "description": "Direction de l'architecture frontend et contribution aux solutions web de niveau entreprise.",
+            "highlightPoints": [
+              "Architecture d'un système de modules micro-frontend pour des applications évolutives",
+              "Mentorat de développeurs juniors sur les meilleures pratiques React et TypeScript",
+              "Collaboration avec des équipes interfonctionnelles sur le développement full-stack"
+            ]
+          },
+          {
+            "title": "Stagiaire programmeur spécialisé",
+            "startDate": "Fév 2025",
+            "endDate": "Oct 2025",
+            "description": "Contribution au développement d'applications web tout en complétant un programme de formation intensive.",
+            "highlightPoints": [
+              "Construction de composants UI réutilisables avec React et TypeScript",
+              "Achèvement de la formation au développement full-stack avec les meilleures performances",
+              "Implémentation de fonctionnalités UI réactives pour les clients d'entreprise"
+            ]
+          }
+        ]
+      }
+    },
+    "projects": {
+      "1": {
+        "title": "Plateforme e-commerce",
+        "description": "Une plateforme e-commerce complète avec authentification utilisateur, gestion des produits, panier d'achat et intégration de paiement."
+      },
+      "2": {
+        "title": "Application de gestion des tâches",
+        "description": "Une application collaborative de gestion des tâches avec mises à jour en temps réel, espaces de travail d'équipe et suivi de projet."
+      },
+      "3": {
+        "title": "Tableau de bord météo",
+        "description": "Un magnifique tableau de bord météo affichant des données météorologiques en temps réel, des prévisions et des cartes interactives utilisant des API météo."
+      },
+      "4": {
+        "title": "Tableau de bord des médias sociaux",
+        "description": "Tableau de bord d'analyse pour les métriques des médias sociaux avec visualisation de données, rapports et mises à jour en temps réel."
+      }
+    },
+    "photos": {
+      "1": {
+        "title": "Randonnée en montagne 2024",
+        "description": "Randonnée en montagne difficile dans l'Himalaya réussie.",
+        "category": "voyage"
+      },
+      "2": {
+        "title": "Gagnant du hackathon",
+        "description": "Première place au hackathon national de développement web.",
+        "category": "réalisation"
+      },
+      "3": {
+        "title": "Coucher de soleil sur la plage",
+        "description": "Magnifique coucher de soleil sur la plage de Goa lors d'un déplacement d'équipe.",
+        "category": "voyage"
+      },
+      "4": {
+        "title": "Réunion de famille",
+        "description": "Rassemblement familial annuel avec cousins et grands-parents.",
+        "category": "famille"
+      },
+      "5": {
+        "title": "Team building au bureau",
+        "description": "Événement de team building sur le campus Infosys.",
+        "category": "travail"
+      },
+      "6": {
+        "title": "Road trip à Manali",
+        "description": "Road trip pittoresque à travers les montagnes de l'Himachal Pradesh.",
+        "category": "voyage"
+      },
+      "7": {
+        "title": "Célébration d'anniversaire",
+        "description": "Célébration avec des amis proches et la famille.",
+        "category": "famille"
+      },
+      "8": {
+        "title": "Prix du meilleur performeur",
+        "description": "Reconnu comme le meilleur performeur au T3 2025.",
+        "category": "réalisation"
+      }
+    }
+  }
+}

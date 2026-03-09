@@ -1,0 +1,191 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "photos": "Photos",
+    "contact": "Contact",
+    "resume": "Resume",
+    "portfolio": "Milind's Portfolio"
+  },
+  "hero": {
+    "greeting": "Hi there! I'm",
+    "viewWork": "View My Work",
+    "getInTouch": "Get In Touch",
+    "viewResume": "View Resume",
+    "downloadResume": "Download Resume"
+  },
+  "about": {
+    "title": "About Me",
+    "basedIn": "Based in {{location}}.",
+    "techIntro": "Here are the technologies I work with:",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools & Others"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "subtitle": "My professional journey and contributions",
+    "present": "Present",
+    "promoted": "Promoted"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Here are some of my recent projects that showcase my skills and experience.",
+    "liveDemo": "Live Demo",
+    "github": "GitHub"
+  },
+  "photos": {
+    "title": "Photo Gallery",
+    "subtitle": "Moments from my journey—travels, achievements, and memories",
+    "seeMore": "See More",
+    "allCategories": "All",
+    "recentPhotos": "Recent Photos"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have a question or want to work together? Feel free to reach out!",
+    "cardTitle": "Send Me a Message",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "message": "Message",
+    "messagePlaceholder": "Your message...",
+    "note": "Note: This form needs backend integration. You can reach me directly at",
+    "send": "Send Message",
+    "formAlert": "This is a UI-only form. Please integrate with an email service like EmailJS or Formspree to make it functional."
+  },
+  "footer": {
+    "copyright": "© {{year}} {{name}}. All rights reserved.",
+    "builtWith": "Built with React, TypeScript, and Tailwind CSS"
+  },
+  "theme": {
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "hi": "Hindi",
+    "fr": "French",
+    "de": "German"
+  },
+  "modal": {
+    "thankYouTitle": "Thank You!",
+    "thankYouMessage": "Your message has been sent successfully. I'll get back to you soon!",
+    "constructionTitle": "Under Construction",
+    "constructionMessage": "This page is currently under construction. Please check back later!",
+    "close": "OK"
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "Browse all my photos by category",
+    "backToHome": "Back to Home",
+    "noPhotos": "No photos found in this category."
+  },
+  "music": {
+    "nowPlaying": "Now Playing"
+  },
+  "data": {
+    "personalInfo": {
+      "name": "Milind Murmu",
+      "title": "Full Stack Developer",
+      "bio": "Passionate developer with expertise in building modern web applications. I love creating elegant solutions to complex problems and turning ideas into reality through code.",
+      "location": "Jamshedpur, India"
+    },
+    "experiences": {
+      "1": {
+        "company": "Infosys Ltd.",
+        "jobTitle": "Specialist Programmer",
+        "startDate": "Feb 2025",
+        "description": "Developing enterprise-level applications and contributing to modern web solutions using cutting-edge technologies.",
+        "highlightPoints": [],
+        "roles": [
+          {
+            "title": "Specialist Programmer",
+            "startDate": "Oct 2025",
+            "description": "Leading frontend architecture and contributing to enterprise-level web solutions.",
+            "highlightPoints": [
+              "Architected micro-frontend module system for scalable apps",
+              "Mentored junior developers on React and TypeScript best practices",
+              "Collaborated with cross-functional teams on full-stack development"
+            ]
+          },
+          {
+            "title": "Specialist Programmer Intern",
+            "startDate": "Feb 2025",
+            "endDate": "Oct 2025",
+            "description": "Contributed to web application development while completing intensive training program.",
+            "highlightPoints": [
+              "Built reusable UI components using React and TypeScript",
+              "Completed full-stack development training with top performance",
+              "Implemented responsive UI features for enterprise clients"
+            ]
+          }
+        ]
+      }
+    },
+    "projects": {
+      "1": {
+        "title": "E-Commerce Platform",
+        "description": "A full-featured e-commerce platform with user authentication, product management, shopping cart, and payment integration."
+      },
+      "2": {
+        "title": "Task Management App",
+        "description": "A collaborative task management application with real-time updates, team workspaces, and project tracking."
+      },
+      "3": {
+        "title": "Weather Dashboard",
+        "description": "A beautiful weather dashboard showing real-time weather data, forecasts, and interactive maps using weather APIs."
+      },
+      "4": {
+        "title": "Social Media Dashboard",
+        "description": "Analytics dashboard for social media metrics with data visualization, reports, and real-time updates."
+      }
+    },
+    "photos": {
+      "1": {
+        "title": "Mountain Trek 2024",
+        "description": "Successfully completed a challenging mountain trek in the Himalayas.",
+        "category": "travel"
+      },
+      "2": {
+        "title": "Hackathon Winner",
+        "description": "Won first place at the National Web Development Hackathon.",
+        "category": "achievement"
+      },
+      "3": {
+        "title": "Beach Sunset",
+        "description": "Beautiful sunset at Goa beach during a team offsite.",
+        "category": "travel"
+      },
+      "4": {
+        "title": "Family Reunion",
+        "description": "Annual family gathering with cousins and grandparents.",
+        "category": "family"
+      },
+      "5": {
+        "title": "Office Team Building",
+        "description": "Team building event at the Infosys campus.",
+        "category": "work"
+      },
+      "6": {
+        "title": "Manali Road Trip",
+        "description": "Scenic road trip through the mountains of Himachal Pradesh.",
+        "category": "travel"
+      },
+      "7": {
+        "title": "Birthday Celebration",
+        "description": "Celebrating with close friends and family.",
+        "category": "family"
+      },
+      "8": {
+        "title": "Best Performer Award",
+        "description": "Recognized as the best performer in Q3 2025.",
+        "category": "achievement"
+      }
+    }
+  }
+}
