@@ -53,7 +53,7 @@
     "emailPlaceholder": "your.email@example.com",
     "message": "Message",
     "messagePlaceholder": "Your message...",
-    "note": "Note: This form needs backend integration. You can reach me directly at",
+    "note": "Note: This form is connected through EmailJS. If not working, You can reach me directly at",
     "send": "Send Message",
     "formAlert": "This is a UI-only form. Please integrate with an email service like EmailJS or Formspree to make it functional."
   },
