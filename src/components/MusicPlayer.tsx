@@ -24,13 +24,16 @@ export default function MusicPlayer() {
   const { theme } = useTheme()
   const { t } = useTranslation()
   const audioRef = useRef<HTMLAudioElement>(null)
+  const hasAutoplayedRef = useRef(false)
 
   const [isOpen, setIsOpen] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0)
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
-  const [volume, setVolume] = useState(0.7)
+  const [volume, setVolume] = useState(musicTracks[0]?.volume ?? 0.7)
+  // true while waiting for first user interaction to trigger autoplay
+  const [awaitingInteraction, setAwaitingInteraction] = useState(true)
 
   const currentTrack = musicTracks[currentTrackIndex]
 
@@ -58,11 +61,17 @@ export default function MusicPlayer() {
 
   const playTrack = useCallback(
     (index: number) => {
+      const track = musicTracks[index]
+      const trackVolume = track.volume ?? volume
       setCurrentTrackIndex(index)
       setCurrentTime(0)
+      setVolume(trackVolume)
+      if (audioRef.current) {
+        audioRef.current.volume = trackVolume
+      }
       setTimeout(() => play(), 50)
     },
-    [play]
+    [play, volume]
   )
 
   const nextTrack = useCallback(() => {
@@ -90,11 +99,36 @@ export default function MusicPlayer() {
     }
   }
 
+  // Sync volume to audio element whenever it changes
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = volume
     }
   }, [volume])
+
+  // Autoplay on first user interaction (browsers block autoplay until a gesture)
+  useEffect(() => {
+    const handleFirstInteraction = () => {
+      if (hasAutoplayedRef.current) return
+      hasAutoplayedRef.current = true
+      setAwaitingInteraction(false)
+      setIsOpen(true)
+      play()
+      document.removeEventListener('click', handleFirstInteraction)
+      document.removeEventListener('keydown', handleFirstInteraction)
+      document.removeEventListener('scroll', handleFirstInteraction, true)
+    }
+
+    document.addEventListener('click', handleFirstInteraction)
+    document.addEventListener('keydown', handleFirstInteraction)
+    document.addEventListener('scroll', handleFirstInteraction, { capture: true, passive: true })
+
+    return () => {
+      document.removeEventListener('click', handleFirstInteraction)
+      document.removeEventListener('keydown', handleFirstInteraction)
+      document.removeEventListener('scroll', handleFirstInteraction, true)
+    }
+  }, [play])
 
   if (musicTracks.length === 0) return null
 
@@ -234,14 +268,22 @@ export default function MusicPlayer() {
       </div>
 
       {/* Floating Button */}
-      <Button
-        size="icon"
-        className={`h-14 w-14 rounded-full shadow-lg ${isPlaying ? 'animate-pulse' : ''}`}
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label="Toggle music player"
-      >
-        <FaMusic className="h-5 w-5" />
-      </Button>
+      <div className="relative">
+        {awaitingInteraction && (
+          <span className="absolute -top-1 -right-1 flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-primary" />
+          </span>
+        )}
+        <Button
+          size="icon"
+          className={`h-14 w-14 rounded-full shadow-lg ${awaitingInteraction ? 'animate-bounce' : isPlaying ? 'animate-pulse' : ''}`}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle music player"
+        >
+          <FaMusic className="h-5 w-5" />
+        </Button>
+      </div>
     </div>
   )
 }

@@ -7,7 +7,8 @@
     "photos": "Fotos",
     "contact": "Kontakt",
     "resume": "Lebenslauf",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "blogs": "Blogs"
   },
   "hero": {
     "greeting": "Hallo! Ich bin",
@@ -88,6 +89,17 @@
   "music": {
     "nowPlaying": "Jetzt läuft"
   },
+  "blogs": {
+    "title": "Meine Blogs",
+    "subtitle": "Gedanken, Tutorials und Geschichten aus meiner Reise als Entwickler.",
+    "backToHome": "Zurück zur Startseite",
+    "backToBlogs": "Zurück zu den Blogs",
+    "readMore": "Weiterlesen",
+    "allCategories": "Alle",
+    "minRead": "Min Lesezeit",
+    "noPosts": "Keine Blogbeiträge gefunden.",
+    "error": "Blog-Beiträge konnten nicht geladen werden. Bitte versuchen Sie es später erneut."
+  },
   "data": {
     "personalInfo": {
       "name": "Milind Murmu",
@@ -98,30 +110,37 @@
     "experiences": {
       "1": {
         "company": "Infosys Ltd.",
+        "location": "Hubli, Indien",
         "jobTitle": "Spezialprogrammierer",
-        "startDate": "Feb 2025",
-        "description": "Entwicklung von Anwendungen auf Unternehmensebene und Beitrag zu modernen Weblösungen mit modernsten Technologien.",
+        "startDate": "Jul 2025",
+        "description": "Entwicklung verteilter Backend-Systeme und skalierbarer Micro-Frontends für Unternehmensprodukte bei Infosys.",
         "highlightPoints": [],
         "roles": [
           {
             "title": "Spezialprogrammierer",
-            "startDate": "Okt 2025",
-            "description": "Leitung der Frontend-Architektur und Beitrag zu Weblösungen auf Unternehmensebene.",
+            "startDate": "Jul 2025",
+            "description": "Engineering hochdurchsatzfähiger Backend-Systeme und Orchestrierung cloud-nativer Deployments.",
             "highlightPoints": [
-              "Architektur eines Micro-Frontend-Modulsystems für skalierbare Apps",
-              "Mentoring von Junior-Entwicklern zu React- und TypeScript-Best-Practices",
-              "Zusammenarbeit mit funktionsübergreifenden Teams bei der Full-Stack-Entwicklung"
+              "Skalierung verteilter Microservices auf 10.000+ tägliche Anfragen durch Backend-Systeme in Go und Java.",
+              "Architektur modularer Micro-Frontends (MFEs) mit React für unabhängige Deployments und Komponenten-Wiederverwendung.",
+              "End-to-End-Feature-Lieferung im SDLC nach SOLID-Prinzipien und Clean-Architecture-Mustern.",
+              "Reduzierung der Fehlerbehebungszeit um 30% durch Integration des LGTM-Observability-Stacks (Loki, Grafana, Tempo, Prometheus).",
+              "99,9% Uptime und 30% weniger manuellem Deployment-Aufwand durch Docker und RKE2 Rancher Kubernetes.",
+              "Absicherung von 500+ Benutzern in 4 Produktmodulen mit Keycloak OAuth 2.",
+              "Excellence Award für technische Wirkung nach Präsentation von Innovationen beim internen Hackathon."
             ]
           },
           {
             "title": "Praktikant Spezialprogrammierer",
             "startDate": "Feb 2025",
-            "endDate": "Okt 2025",
-            "description": "Beitrag zur Webanwendungsentwicklung während der Absolvierung eines intensiven Schulungsprogramms.",
+            "endDate": "Jun 2025",
+            "description": "Full-Stack-Feature-Lieferung und Erhalt eines Pre-Placement-Angebots für herausragende Leistung.",
             "highlightPoints": [
-              "Erstellung wiederverwendbarer UI-Komponenten mit React und TypeScript",
-              "Abschluss der Full-Stack-Entwicklungsschulung mit Spitzenleistung",
-              "Implementierung responsiver UI-Funktionen für Unternehmenskunden"
+              "Lieferung von 10+ sicheren REST-APIs mit Spring Boot, integriert in React-TypeScript-Frontends.",
+              "Standardisierung der Artefakt-Lieferung mit produktionsreifen Dockerfiles auf JFrog Artifactory.",
+              "Validierung von S3-kompatiblem Speicher durch MinIO-Deployment auf einer Linux-VM mit Integrations-POC.",
+              "Feinkörnige Zugriffskontrolle auf einem Vite-TypeScript-Frontend mit Keycloak OAuth 2.0 und RBAC.",
+              "Pre-Placement-Angebot (PPO) für herausragende Leistung während des 5-monatigen Praktikums."
             ]
           }
         ]
@@ -129,62 +148,59 @@
     },
     "projects": {
       "1": {
-        "title": "E-Commerce-Plattform",
-        "description": "Eine voll ausgestattete E-Commerce-Plattform mit Benutzerauthentifizierung, Produktverwaltung, Warenkorb und Zahlungsintegration."
+        "title": "SaralRozgar",
+        "description": "Ein WhatsApp-nativer Job-Matching-Chatbot für Blue-Collar-Arbeiter in Indien. GPS-basierte Jobsuche mit der Haversine-Formel, NLP-Einzel-Abfrageverarbeitung über Google Gemini AI, mehrsprachige Konversationen, Sprachnachrichten, Text-to-Speech (gTTS) und vollständiges Jobverwaltungsmenü — alles über WhatsApp."
       },
       "2": {
-        "title": "Aufgabenverwaltungs-App",
-        "description": "Eine kollaborative Aufgabenverwaltungsanwendung mit Echtzeit-Updates, Team-Arbeitsbereichen und Projektverfolgung."
-      },
-      "3": {
-        "title": "Wetter-Dashboard",
-        "description": "Ein schönes Wetter-Dashboard mit Echtzeit-Wetterdaten, Vorhersagen und interaktiven Karten unter Verwendung von Wetter-APIs."
-      },
-      "4": {
-        "title": "Social-Media-Dashboard",
-        "description": "Analyse-Dashboard für Social-Media-Metriken mit Datenvisualisierung, Berichten und Echtzeit-Updates."
+        "title": "CGC Placements",
+        "description": "Eine Full-Stack-Hochschulplatzierungs-App mit Echtzeit-Benachrichtigungen zu Unternehmensbesuchen, Student-Dashboard mit Platzierungsanalysen, dynamischer GPA- und Abschlussjahrfilterung, sicherer JWT + bcrypt-Authentifizierung und vollständig responsiver Tailwind-CSS-Oberfläche."
       }
     },
     "photos": {
       "1": {
-        "title": "Bergwanderung 2024",
-        "description": "Erfolgreich eine herausfordernde Bergwanderung im Himalaya abgeschlossen.",
+        "title": "Im Wind gelehnt",
+        "description": "Angelehnt an eine schräge Kokospalme auf einer Küstenklippe mit Blick auf das Arabische Meer.",
         "category": "Reise"
       },
       "2": {
-        "title": "Hackathon-Gewinner",
-        "description": "Ersten Platz beim nationalen Web-Entwicklungs-Hackathon gewonnen.",
-        "category": "Leistung"
+        "title": "Ins Licht",
+        "description": "Erkundung einer dramatischen Felshöhle mit natürlichem Licht, das durch den Tunneleingang strömt.",
+        "category": "Reise"
       },
       "3": {
-        "title": "Strand-Sonnenuntergang",
-        "description": "Wunderschöner Sonnenuntergang am Goa-Strand während eines Team-Ausflugs.",
+        "title": "Einfach und natürlich",
+        "description": "Durchwatten eines flachen Dschungelflüsses unter dem Blätterdach eines riesigen tropischen Baumes.",
         "category": "Reise"
       },
       "4": {
-        "title": "Familientreffen",
-        "description": "Jährliches Familientreffen mit Cousins und Großeltern.",
-        "category": "Familie"
+        "title": "Wellen und Stille",
+        "description": "Sitzen auf Küstenfelsen und Beobachten der einrollenden Wellen unter einem klaren blauen Himmel.",
+        "category": "Reise"
       },
       "5": {
-        "title": "Büro-Teambuilding",
-        "description": "Teambuilding-Event auf dem Infosys-Campus.",
-        "category": "Arbeit"
+        "title": "Stilles Wasser",
+        "description": "Ein ruhiger Bergstausee, eingebettet zwischen üppigen bewaldeten Hügeln, umrahmt von Wildblumen.",
+        "category": "Reise"
       },
       "6": {
-        "title": "Manali-Roadtrip",
-        "description": "Malerischer Roadtrip durch die Berge von Himachal Pradesh.",
+        "title": "Gemütliches Café",
+        "description": "Ein gemütliches Industrial-Chic-Café mit hohen Decken, Kuppelpendelleuchten und üppigen Zimmerpflanzen.",
         "category": "Reise"
       },
       "7": {
-        "title": "Geburtstagsfeier",
-        "description": "Feier mit engen Freunden und Familie.",
-        "category": "Familie"
+        "title": "Am Wasserfall",
+        "description": "Schwimmen am Fuße eines atemberaubenden Wasserfalls, umgeben von Felsklippen und dichtem Wald.",
+        "category": "Reise"
       },
       "8": {
-        "title": "Beste-Leistung-Auszeichnung",
-        "description": "Als bester Leistungsträger im Q3 2025 anerkannt.",
-        "category": "Leistung"
+        "title": "Goldene Stunde",
+        "description": "Ein wunderschöner Strandsonnenuntergang mit Silhouetten von Menschen, die die goldene Stunde am Meer genießen.",
+        "category": "Reise"
+      },
+      "9": {
+        "title": "IIT Dharwad Abschlussfeier",
+        "description": "Feier des Abschlusstages mit engen Freunden vor dem ikonischen IIT Dharwad-Schild.",
+        "category": "Familie & Freunde"
       }
     }
   }

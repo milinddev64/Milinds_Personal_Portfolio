@@ -3,8 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { photos } from '@/data/portfolio'
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { FaChevronLeft, FaChevronRight, FaExpand } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import MediaViewer from '@/components/MediaViewer'
 
 const INTERVAL_MS = 5000
 const TICK_MS = 50
@@ -17,6 +18,7 @@ const Photos = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [progress, setProgress] = useState(0)
   const [isPausedState, setIsPausedState] = useState(false)
+  const [activeMedia, setActiveMedia] = useState<{ src: string; title: string } | null>(null)
   const isPaused = useRef(false)
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const tickRef = useRef<ReturnType<typeof setInterval> | null>(null)
@@ -109,14 +111,24 @@ const Photos = () => {
                     }`}
                   >
                     {photo.image ? (
-                      <img
-                        src={photo.image}
-                        alt={photoData.title}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.style.display = 'none'
-                        }}
-                      />
+                      <div className="relative w-full h-full group/img">
+                        <img
+                          src={photo.image}
+                          alt={photoData.title}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none'
+                          }}
+                        />
+                        {/* Expand button — visible on hover */}
+                        <button
+                          className="absolute top-3 right-3 z-10 p-2 rounded-full bg-black/50 text-white opacity-0 group-hover/img:opacity-100 transition-opacity hover:bg-black/70"
+                          onClick={() => setActiveMedia({ src: photo.image!, title: photoData.title })}
+                          aria-label={`View ${photoData.title} fullscreen`}
+                        >
+                          <FaExpand className="h-4 w-4" />
+                        </button>
+                      </div>
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
                         <p className="text-4xl font-bold text-muted-foreground/20">
@@ -236,6 +248,14 @@ const Photos = () => {
           </div>
         </div>
       </div>
+
+      <MediaViewer
+        isOpen={activeMedia !== null}
+        onClose={() => setActiveMedia(null)}
+        type="image"
+        src={activeMedia?.src ?? ''}
+        title={activeMedia?.title}
+      />
     </section>
   )
 }

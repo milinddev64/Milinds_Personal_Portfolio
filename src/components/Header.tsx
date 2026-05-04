@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link as ScrollLink } from 'react-scroll'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { FaBars, FaTimes, FaArrowLeft } from 'react-icons/fa'
 import { Button } from '@/components/ui/button'
 import ThemeToggle from '@/components/ThemeToggle'
@@ -36,16 +36,26 @@ const Header = () => {
               to="hero"
               smooth={true}
               duration={500}
-              className="text-2xl font-bold cursor-pointer hover:text-primary transition-colors"
+              className="cursor-pointer hover:text-primary transition-colors"
             >
-              {t('nav.portfolio')}
+              <span
+                style={{ fontFamily: '"Doto", sans-serif', fontWeight: 700, fontVariationSettings: '"ROND" 50' }}
+                className="text-3xl tracking-wider text-primary"
+              >
+                {t('nav.portfolio')}
+              </span>
             </ScrollLink>
           ) : (
             <button
               onClick={() => navigate('/')}
-              className="text-2xl font-bold cursor-pointer hover:text-primary transition-colors"
+              className="cursor-pointer hover:text-primary transition-colors"
             >
-              {t('nav.portfolio')}
+              <span
+                style={{ fontFamily: '"Doto", sans-serif', fontWeight: 700, fontVariationSettings: '"ROND" 50' }}
+                className="text-3xl tracking-wider text-primary"
+              >
+                {t('nav.portfolio')}
+              </span>
             </button>
           )}
 
@@ -67,6 +77,12 @@ const Header = () => {
                     {t(item.nameKey)}
                   </ScrollLink>
                 ))}
+                <Link
+                  to="/blogs"
+                  className="cursor-pointer hover:text-primary transition-colors"
+                >
+                  {t('nav.blogs')}
+                </Link>
               </>
             ) : (
               <Button
@@ -128,6 +144,13 @@ const Header = () => {
                   {t(item.nameKey)}
                 </ScrollLink>
               ))}
+              <Link
+                to="/blogs"
+                className="cursor-pointer hover:text-primary transition-colors"
+                onClick={toggleMenu}
+              >
+                {t('nav.blogs')}
+              </Link>
             </div>
           </div>
         )}

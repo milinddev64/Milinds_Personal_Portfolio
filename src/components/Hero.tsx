@@ -1,16 +1,29 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
 import { Button } from '@/components/ui/button'
-import { FaArrowDown, FaEye, FaDownload, FaHardHat } from 'react-icons/fa'
+import { FaArrowDown, FaEye, FaDownload } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
-import InfoModal from '@/components/InfoModal'
 import { profileImage } from '@/data/portfolio'
 import { motion } from 'framer-motion'
+import MediaViewer from '@/components/MediaViewer'
+
+const RESUME_PATH = '/documents/resumes/Milind-Murmu.pdf'
 
 const Hero = () => {
   const { t } = useTranslation()
-  const [showConstruction, setShowConstruction] = useState(false)
   const [imgError, setImgError] = useState(false)
+  const [isResumeOpen, setIsResumeOpen] = useState(false)
+
+  const handleViewResume = () => setIsResumeOpen(true)
+
+  const handleDownloadResume = () => {
+    const link = document.createElement('a')
+    link.href = RESUME_PATH
+    link.download = 'Milind-Murmu.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
 
   return (
     <section
@@ -64,7 +77,7 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 className="w-full sm:w-auto col-span-1"
-                onClick={() => setShowConstruction(true)}
+                onClick={handleViewResume}
               >
                 <FaEye className="mr-2" />
                 {t('hero.viewResume')}
@@ -74,7 +87,7 @@ const Hero = () => {
                 size="lg"
                 variant="secondary"
                 className="w-full sm:w-auto col-span-1"
-                onClick={() => setShowConstruction(true)}
+                onClick={handleDownloadResume}
               >
                 <FaDownload className="mr-2" />
                 {t('hero.downloadResume')}
@@ -88,11 +101,11 @@ const Hero = () => {
               <img
                 src={profileImage}
                 alt={t('data.personalInfo.name')}
-                className="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover ring-4 ring-primary/20 shadow-lg"
+                className="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover ring-4 ring-primary/30 shadow-[0_0_40px_8px_hsl(var(--primary)/0.45)]"
                 onError={() => setImgError(true)}
               />
             ) : (
-              <div className="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full bg-gradient-to-br from-primary to-primary/60 ring-4 ring-primary/20 shadow-lg flex items-center justify-center">
+              <div className="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full bg-gradient-to-br from-primary to-primary/60 ring-4 ring-primary/30 shadow-[0_0_40px_8px_hsl(var(--primary)/0.45)] flex items-center justify-center">
                 <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground">
                   {t('data.personalInfo.name')
                     .split(' ')
@@ -115,14 +128,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <InfoModal
-        isOpen={showConstruction}
-        onClose={() => setShowConstruction(false)}
-        iconClassName="text-yellow-500"
-        icon={<FaHardHat className="h-12 w-12" />}
-        title={t('modal.constructionTitle')}
-        message={t('modal.constructionMessage')}
-        buttonLabel={t('modal.close')}
+      <MediaViewer
+        isOpen={isResumeOpen}
+        onClose={() => setIsResumeOpen(false)}
+        type="pdf"
+        src={RESUME_PATH}
+        title="Milind Murmu — Resume"
       />
     </section>
   )

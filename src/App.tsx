@@ -6,6 +6,8 @@ import MusicPlayer from '@/components/MusicPlayer'
 
 const Home = lazy(() => import('@/pages/Home'))
 const Gallery = lazy(() => import('@/pages/Gallery'))
+const Blogs = lazy(() => import('@/pages/Blogs'))
+const BlogDetail = lazy(() => import('@/pages/BlogDetail'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/:slug" element={<BlogDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

@@ -10,13 +10,15 @@
     "preview": "vite preview",
     "test": "vitest",
     "test:ci": "vitest run"
-
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^16.2.1",
+    "@contentful/rich-text-types": "^17.2.7",
     "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "contentful": "^11.12.1",
     "framer-motion": "^12.35.1",
     "i18next": "^25.8.14",
     "i18next-browser-languagedetector": "^8.2.1",
@@ -55,5 +57,3 @@
     "vitest": "^4.0.18"
   }
 }
-
-

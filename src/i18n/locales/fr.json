@@ -7,7 +7,8 @@
     "photos": "Photos",
     "contact": "Contact",
     "resume": "CV",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "blogs": "Blogs"
   },
   "hero": {
     "greeting": "Bonjour! Je suis",
@@ -88,6 +89,17 @@
   "music": {
     "nowPlaying": "En cours de lecture"
   },
+  "blogs": {
+    "title": "Mes Blogs",
+    "subtitle": "Réflexions, tutoriels et histoires de mon parcours en tant que développeur.",
+    "backToHome": "Retour à l'accueil",
+    "backToBlogs": "Retour aux blogs",
+    "readMore": "Lire la suite",
+    "allCategories": "Tous",
+    "minRead": "min de lecture",
+    "noPosts": "Aucun article de blog trouvé.",
+    "error": "Échec du chargement des articles. Veuillez réessayer plus tard."
+  },
   "data": {
     "personalInfo": {
       "name": "Milind Murmu",
@@ -98,30 +110,37 @@
     "experiences": {
       "1": {
         "company": "Infosys Ltd.",
+        "location": "Hubli, Inde",
         "jobTitle": "Programmeur spécialisé",
-        "startDate": "Fév 2025",
-        "description": "Développement d'applications de niveau entreprise et contribution à des solutions web modernes utilisant des technologies de pointe.",
+        "startDate": "Juil 2025",
+        "description": "Développement de systèmes backend distribués et de micro-frontends évolutifs pour des produits d'entreprise chez Infosys.",
         "highlightPoints": [],
         "roles": [
           {
             "title": "Programmeur spécialisé",
-            "startDate": "Oct 2025",
-            "description": "Direction de l'architecture frontend et contribution aux solutions web de niveau entreprise.",
+            "startDate": "Juil 2025",
+            "description": "Ingénierie de systèmes backend à haut débit et orchestration de déploiements cloud-native.",
             "highlightPoints": [
-              "Architecture d'un système de modules micro-frontend pour des applications évolutives",
-              "Mentorat de développeurs juniors sur les meilleures pratiques React et TypeScript",
-              "Collaboration avec des équipes interfonctionnelles sur le développement full-stack"
+              "Mise à l'échelle des microservices distribués pour traiter 10 000+ requêtes quotidiennes en ingéniant des systèmes backend en Go et Java.",
+              "Architecture de Micro-Frontends (MFEs) modulaires avec React, permettant des déploiements indépendants et la réutilisation de composants.",
+              "Livraison de fonctionnalités de bout en bout dans le SDLC en suivant les principes SOLID et les modèles Clean Architecture.",
+              "Réduction du temps de dépannage de 30% en intégrant la pile d'observabilité LGTM (Loki, Grafana, Tempo, Prometheus).",
+              "Maintien d'une disponibilité de 99,9% et réduction des efforts de déploiement manuel de 30% avec Docker et Kubernetes RKE2 Rancher.",
+              "Sécurisation de 500+ utilisateurs sur 4 modules produits avec Keycloak OAuth 2.",
+              "Prix d'excellence reçu pour l'impact technique lors des hackathons internes présentés à la direction."
             ]
           },
           {
             "title": "Stagiaire programmeur spécialisé",
             "startDate": "Fév 2025",
-            "endDate": "Oct 2025",
-            "description": "Contribution au développement d'applications web tout en complétant un programme de formation intensive.",
+            "endDate": "Juin 2025",
+            "description": "Livraison de fonctionnalités full-stack et obtention d'une offre de pré-placement pour performances exceptionnelles.",
             "highlightPoints": [
-              "Construction de composants UI réutilisables avec React et TypeScript",
-              "Achèvement de la formation au développement full-stack avec les meilleures performances",
-              "Implémentation de fonctionnalités UI réactives pour les clients d'entreprise"
+              "Livraison de 10+ API REST sécurisées avec Spring Boot intégrées à des frontends React TypeScript.",
+              "Standardisation de la livraison d'artefacts avec des Dockerfiles de qualité production publiés sur JFrog Artifactory.",
+              "Validation de la faisabilité du stockage compatible S3 en déployant MinIO sur une VM Linux avec un POC d'intégration.",
+              "Application du contrôle d'accès fin sur un frontend Vite TypeScript avec Keycloak OAuth 2.0 et RBAC.",
+              "Obtention d'une offre de pré-placement (PPO) pour performance exceptionnelle lors du stage de 5 mois."
             ]
           }
         ]
@@ -129,62 +148,59 @@
     },
     "projects": {
       "1": {
-        "title": "Plateforme e-commerce",
-        "description": "Une plateforme e-commerce complète avec authentification utilisateur, gestion des produits, panier d'achat et intégration de paiement."
+        "title": "SaralRozgar",
+        "description": "Un chatbot de mise en relation d'emplois natif WhatsApp pour les travailleurs cols bleus en Inde. Recherche d'emplois GPS via la formule Haversine, analyse NLP en un coup via Google Gemini AI, conversations multilingues, messages vocaux, text-to-speech (gTTS) et menu de gestion des emplois complet — tout sur WhatsApp."
       },
       "2": {
-        "title": "Application de gestion des tâches",
-        "description": "Une application collaborative de gestion des tâches avec mises à jour en temps réel, espaces de travail d'équipe et suivi de projet."
-      },
-      "3": {
-        "title": "Tableau de bord météo",
-        "description": "Un magnifique tableau de bord météo affichant des données météorologiques en temps réel, des prévisions et des cartes interactives utilisant des API météo."
-      },
-      "4": {
-        "title": "Tableau de bord des médias sociaux",
-        "description": "Tableau de bord d'analyse pour les métriques des médias sociaux avec visualisation de données, rapports et mises à jour en temps réel."
+        "title": "CGC Placements",
+        "description": "Application de placement universitaire full-stack avec notifications de visites d'entreprises en temps réel, tableau de bord étudiant avec analyses de placement, filtrage dynamique par GPA et année de promotion, authentification sécurisée JWT + bcrypt, et interface Tailwind CSS entièrement responsive."
       }
     },
     "photos": {
       "1": {
-        "title": "Randonnée en montagne 2024",
-        "description": "Randonnée en montagne difficile dans l'Himalaya réussie.",
+        "title": "Appuyé contre le vent",
+        "description": "Debout contre un cocotier incliné sur une falaise côtière surplombant la mer d'Arabie.",
         "category": "voyage"
       },
       "2": {
-        "title": "Gagnant du hackathon",
-        "description": "Première place au hackathon national de développement web.",
-        "category": "réalisation"
+        "title": "Vers la lumière",
+        "description": "Exploration d'une grotte rocheuse dramatique avec la lumière naturelle qui traverse l'entrée du tunnel.",
+        "category": "voyage"
       },
       "3": {
-        "title": "Coucher de soleil sur la plage",
-        "description": "Magnifique coucher de soleil sur la plage de Goa lors d'un déplacement d'équipe.",
+        "title": "Simple et naturel",
+        "description": "Traversant une rivière forestière peu profonde sous le couvert d'un immense arbre tropical.",
         "category": "voyage"
       },
       "4": {
-        "title": "Réunion de famille",
-        "description": "Rassemblement familial annuel avec cousins et grands-parents.",
-        "category": "famille"
+        "title": "Vagues et sérénité",
+        "description": "Assis sur des rochers côtiers, regardant les vagues déferler sous un ciel bleu dégagé.",
+        "category": "voyage"
       },
       "5": {
-        "title": "Team building au bureau",
-        "description": "Événement de team building sur le campus Infosys.",
-        "category": "travail"
+        "title": "Eaux calmes",
+        "description": "Un réservoir de montagne serein niché entre des collines boisées luxuriantes, encadré par des fleurs sauvages.",
+        "category": "voyage"
       },
       "6": {
-        "title": "Road trip à Manali",
-        "description": "Road trip pittoresque à travers les montagnes de l'Himachal Pradesh.",
+        "title": "Café Bonne Ambiance",
+        "description": "Un café confortable au style industriel chic avec de hauts plafonds, des luminaires en dôme et des plantes intérieures luxuriantes.",
         "category": "voyage"
       },
       "7": {
-        "title": "Célébration d'anniversaire",
-        "description": "Célébration avec des amis proches et la famille.",
-        "category": "famille"
+        "title": "Sous la cascade",
+        "description": "Nager au pied d'une magnifique cascade entourée de falaises rocheuses et de forêt dense.",
+        "category": "voyage"
       },
       "8": {
-        "title": "Prix du meilleur performeur",
-        "description": "Reconnu comme le meilleur performeur au T3 2025.",
-        "category": "réalisation"
+        "title": "L'heure dorée",
+        "description": "Un magnifique coucher de soleil sur la plage avec des silhouettes de personnes profitant de l'heure dorée au bord de la mer.",
+        "category": "voyage"
+      },
+      "9": {
+        "title": "Remise des diplômes à l'IIT Dharwad",
+        "description": "Célébration du jour de la remise des diplômes avec de proches amis devant l'emblématique panneau IIT Dharwad.",
+        "category": "famille et amis"
       }
     }
   }

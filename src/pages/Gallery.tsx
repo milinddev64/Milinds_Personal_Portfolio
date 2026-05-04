@@ -3,13 +3,15 @@ import { useNavigate } from 'react-router-dom'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { photos } from '@/data/portfolio'
-import { FaArrowLeft } from 'react-icons/fa'
+import { FaExpand } from 'react-icons/fa'
 import { useTranslation } from 'react-i18next'
+import MediaViewer from '@/components/MediaViewer'
 
 const Gallery = () => {
   const { t } = useTranslation()
   const navigate = useNavigate()
   const [activeCategory, setActiveCategory] = useState('all')
+  const [activeMedia, setActiveMedia] = useState<{ src: string; title: string } | null>(null)
 
   const categories = useMemo(() => {
     const cats = new Set<string>()
@@ -28,16 +30,6 @@ const Gallery = () => {
     <main className="min-h-screen pt-24 pb-20">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Back button */}
-          <Button
-            variant="ghost"
-            className="mb-6 flex items-center gap-2"
-            onClick={() => navigate('/')}
-          >
-            <FaArrowLeft />
-            {t('gallery.backToHome')}
-          </Button>
-
           {/* Page Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -82,18 +74,28 @@ const Gallery = () => {
               }
 
               return (
-                <Card key={photo.id} className="overflow-hidden hover:shadow-xl transition-shadow group">
+                <Card
+                  key={photo.id}
+                  className="overflow-hidden hover:shadow-xl transition-shadow group cursor-pointer"
+                  onClick={() => photo.image && setActiveMedia({ src: photo.image, title: photoData.title })}
+                >
                   <div className="relative h-56 bg-gradient-to-br from-primary/20 to-secondary/20 overflow-hidden">
                     {photo.image ? (
-                      <img
-                        src={photo.image}
-                        alt={photoData.title}
-                        loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        onError={(e) => {
-                          e.currentTarget.style.display = 'none'
-                        }}
-                      />
+                      <>
+                        <img
+                          src={photo.image}
+                          alt={photoData.title}
+                          loading="lazy"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none'
+                          }}
+                        />
+                        {/* Expand hint on hover */}
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                          <FaExpand className="text-white opacity-0 group-hover:opacity-100 transition-opacity h-6 w-6 drop-shadow" />
+                        </div>
+                      </>
                     ) : (
                       <div className="w-full h-full flex items-center justify-center">
                         <p className="text-2xl font-bold text-muted-foreground/20">
@@ -127,6 +129,14 @@ const Gallery = () => {
           )}
         </div>
       </div>
+
+      <MediaViewer
+        isOpen={activeMedia !== null}
+        onClose={() => setActiveMedia(null)}
+        type="image"
+        src={activeMedia?.src ?? ''}
+        title={activeMedia?.title}
+      />
     </main>
   )
 }

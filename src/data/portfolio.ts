@@ -2,7 +2,7 @@ import type { Skill, SocialLink, Experience, Photo, Project, MusicTrack } from '
 
 // Structural data only - translatable text lives in src/i18n/locales/*.json
 
-export const profileImage = '/images/profile.jpg'
+export const profileImage = '/images/profile/milind-profile.JPG'
 
 export const skills: Skill[] = [
   { name: 'React', icon: 'FaReact', category: 'frontend', proficiency: 95 },
@@ -24,37 +24,17 @@ export const projects: Project[] = [
     id: '1',
     title: '',
     description: '',
-    image: '/images/project1.jpg',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    demoUrl: 'https://example.com',
-    githubUrl: 'https://github.com/yourusername/project1',
+    image: '',
+    tags: ['Node.js', 'TypeScript', 'MongoDB', 'Google Gemini AI', 'WhatsApp API', 'gTTS'],
+    githubUrl: 'https://github.com/milinddev64/SaralRozgar_ONEST',
   },
   {
     id: '2',
     title: '',
     description: '',
-    image: '/images/project2.jpg',
-    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma'],
-    demoUrl: 'https://example.com',
-    githubUrl: 'https://github.com/yourusername/project2',
-  },
-  {
-    id: '3',
-    title: '',
-    description: '',
-    image: '/images/project3.jpg',
-    tags: ['React', 'TypeScript', 'TailwindCSS', 'Weather API'],
-    demoUrl: 'https://example.com',
-    githubUrl: 'https://github.com/yourusername/project3',
-  },
-  {
-    id: '4',
-    title: '',
-    description: '',
-    image: '/images/project4.jpg',
-    tags: ['React', 'D3.js', 'Node.js', 'Express'],
-    demoUrl: 'https://example.com',
-    githubUrl: 'https://github.com/yourusername/project4',
+    image: '',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'JWT'],
+    githubUrl: 'https://github.com/milinddev64/CGC-Placements',
   },
 ]
 
@@ -73,7 +53,7 @@ export const experiences: Experience[] = [
     startDate: '',
     endDate: undefined,
     description: '',
-    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'AWS'],
+    technologies: ['Go', 'Java', 'React', 'TypeScript', 'Spring Boot', 'Docker', 'Kubernetes', 'Keycloak', 'Grafana', 'Prometheus'],
     highlightPoints: [],
     roles: [
       {
@@ -95,21 +75,21 @@ export const experiences: Experience[] = [
 ]
 
 export const photos: Photo[] = [
-  { id: '1', title: '', description: '', image: '/images/photo1.jpg', category: 'travel' },
-  { id: '2', title: '', description: '', image: '/images/photo2.jpg', category: 'achievement' },
-  { id: '3', title: '', description: '', image: '/images/photo3.jpg', category: 'travel' },
-  { id: '4', title: '', description: '', image: '/images/photo4.jpg', category: 'family' },
-  { id: '5', title: '', description: '', image: '/images/photo5.jpg', category: 'work' },
-  { id: '6', title: '', description: '', image: '/images/photo6.jpg', category: 'travel' },
-  { id: '7', title: '', description: '', image: '/images/photo7.jpg', category: 'family' },
-  { id: '8', title: '', description: '', image: '/images/photo8.jpg', category: 'achievement' },
+  { id: '1', title: '', description: '', image: '/images/photos/travel/1.jpeg', category: 'travel' },
+  { id: '2', title: '', description: '', image: '/images/photos/travel/2.jpeg', category: 'travel' },
+  { id: '3', title: '', description: '', image: '/images/photos/travel/3.jpeg', category: 'travel' },
+  { id: '4', title: '', description: '', image: '/images/photos/travel/4.jpeg', category: 'travel' },
+  { id: '5', title: '', description: '', image: '/images/photos/travel/5.JPG', category: 'travel' },
+  { id: '6', title: '', description: '', image: '/images/photos/travel/6.JPG', category: 'travel' },
+  { id: '7', title: '', description: '', image: '/images/photos/travel/7.JPG', category: 'travel' },
+  { id: '8', title: '', description: '', image: '/images/photos/travel/8.JPG', category: 'travel' },
+  { id: '9', title: '', description: '', image: '/images/photos/family/9.jpeg', category: 'family & friends' },
 ]
 
-// TODO: Replace with your actual favorite tracks and place mp3 files in public/music/
 export const musicTracks: MusicTrack[] = [
-  { id: '1', title: 'Chill Vibes', artist: 'Lo-Fi Artist', src: '/music/song1.mp3', cover: '' },
-  { id: '2', title: 'Night Drive', artist: 'Synthwave DJ', src: '/music/song2.mp3', cover: '' },
-  { id: '3', title: 'Morning Coffee', artist: 'Jazz Trio', src: '/music/song3.mp3', cover: '' },
-  { id: '4', title: 'Sunset Groove', artist: 'Indie Band', src: '/music/song4.mp3', cover: '' },
-  { id: '5', title: 'Deep Focus', artist: 'Ambient Sound', src: '/music/song5.mp3', cover: '' },
+  { id: '1', title: 'A Sky Full of Stars', artist: 'Coldplay',       src: '/music/songs/1-A-Sky-Full-Of-Stars.mp3',        volume: 0.10 },
+  { id: '2', title: 'Love Me Like You Do',  artist: 'Ellie Goulding', src: '/music/songs/2-love-me-like-you-do-mp3.mp3',   volume: 0.10 },
+  { id: '3', title: 'End of Beginning',     artist: 'Djo',            src: '/music/songs/3-end-of-beginning.mp3',           volume: 0.10 },
+  { id: '4', title: 'Paradise',             artist: 'Coldplay',       src: '/music/songs/4-Paradise.mp3',                   volume: 0.10 },
+  { id: '5', title: 'Let the World Burn',   artist: 'Chris Grey',     src: '/music/songs/5-let-the-world-burn.mp3',         volume: 0.10 },
 ]

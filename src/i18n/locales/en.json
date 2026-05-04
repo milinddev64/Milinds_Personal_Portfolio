@@ -7,7 +7,8 @@
     "photos": "Photos",
     "contact": "Contact",
     "resume": "Resume",
-    "portfolio": "Milind's Portfolio"
+    "portfolio": "Milind.Dev",
+    "blogs": "Blogs"
   },
   "hero": {
     "greeting": "Hi there! I'm",
@@ -88,40 +89,58 @@
   "music": {
     "nowPlaying": "Now Playing"
   },
+  "blogs": {
+    "title": "My Blogs",
+    "subtitle": "Thoughts, tutorials, and stories from my journey as a developer.",
+    "backToHome": "Back to Home",
+    "backToBlogs": "Back to Blogs",
+    "readMore": "Read More",
+    "allCategories": "All",
+    "minRead": "min read",
+    "noPosts": "No blog posts found.",
+    "error": "Failed to load blog posts. Please try again later."
+  },
   "data": {
     "personalInfo": {
       "name": "Milind Murmu",
-      "title": "Full Stack Developer",
+      "title": "Software Developer",
       "bio": "Passionate developer with expertise in building modern web applications. I love creating elegant solutions to complex problems and turning ideas into reality through code.",
       "location": "Jamshedpur, India"
     },
     "experiences": {
       "1": {
         "company": "Infosys Ltd.",
+        "location": "Hubli, India",
         "jobTitle": "Specialist Programmer",
-        "startDate": "Feb 2025",
-        "description": "Developing enterprise-level applications and contributing to modern web solutions using cutting-edge technologies.",
+        "startDate": "July 2025",
+        "description": "Building distributed backend systems and scalable micro-frontends for enterprise products at Infosys.",
         "highlightPoints": [],
         "roles": [
           {
             "title": "Specialist Programmer",
-            "startDate": "Oct 2025",
-            "description": "Leading frontend architecture and contributing to enterprise-level web solutions.",
+            "startDate": "July 2025",
+            "description": "Engineering high-throughput backend systems and orchestrating cloud-native deployments.",
             "highlightPoints": [
-              "Architected micro-frontend module system for scalable apps",
-              "Mentored junior developers on React and TypeScript best practices",
-              "Collaborated with cross-functional teams on full-stack development"
+              "Scaled distributed microservices to handle 10,000+ daily requests by engineering backend systems in Go and Java, collaborating with senior engineers to ensure high-throughput inter-service communication.",
+              "Architected modular Micro-Frontends (MFEs) using React, enabling independent deployments and component reuse across multiple internal teams.",
+              "Delivered features end-to-end across the SDLC by gathering requirements, designing system architecture, and writing scalable, reusable code following SOLID principles and Clean Architecture patterns.",
+              "Reduced troubleshooting time by 30% by integrating the LGTM observability stack (Loki, Grafana, Tempo, Prometheus) and centralizing log streaming from Go microservices for real-time analytics.",
+              "Maintained 99.9% uptime and reduced manual deployment effort by 30% by containerizing services with Docker and orchestrating MFE deployments on an RKE2 Rancher Kubernetes cluster.",
+              "Secured 500+ users across 4 independently scaled product modules by implementing robust authentication and authorization using Keycloak OAuth 2.",
+              "Received an Excellence Award for technical impact after presenting engineering innovations and high-availability solutions to senior leadership during internal hackathons."
             ]
           },
           {
             "title": "Specialist Programmer Intern",
             "startDate": "Feb 2025",
-            "endDate": "Oct 2025",
-            "description": "Contributed to web application development while completing intensive training program.",
+            "endDate": "June 2025",
+            "description": "Delivered full-stack features and secured a Pre-Placement Offer for outstanding performance.",
             "highlightPoints": [
-              "Built reusable UI components using React and TypeScript",
-              "Completed full-stack development training with top performance",
-              "Implemented responsive UI features for enterprise clients"
+              "Delivered 10+ secure REST APIs by developing core backend microservices using Spring Boot and seamlessly integrating them with React TypeScript frontend applications.",
+              "Standardized artifact delivery for Spring Boot microservices and a React 19 Vite frontend by authoring production-grade Dockerfiles and publishing versioned images to the corporate JFrog Artifactory registry, enabling consistent pull-ready deployments across all development environments.",
+              "Evaluated cloud-native object storage by deploying MinIO on a Linux VM and building an end-to-end service integration POC, validating S3-compatible storage feasibility ahead of production planning.",
+              "Enforced fine-grained access control on a Vite TypeScript frontend by integrating Keycloak OAuth 2.0 with RBAC, restricting route and feature access based on user roles across multiple application modules.",
+              "Secured a Pre-Placement Offer (PPO) for outstanding performance and delivering critical project milestones ahead of schedule during the 5-month internship."
             ]
           }
         ]
@@ -129,62 +148,59 @@
     },
     "projects": {
       "1": {
-        "title": "E-Commerce Platform",
-        "description": "A full-featured e-commerce platform with user authentication, product management, shopping cart, and payment integration."
+        "title": "Saral Rozgar",
+        "description": "A WhatsApp-native job-matching chatbot for blue-collar workers in India. Supports GPS-based job discovery with the Haversine formula, NLP-powered one-shot query parsing via Google Gemini AI, multilingual conversations, voice messages, text-to-speech (gTTS), and a full job management menu — all over WhatsApp."
       },
       "2": {
-        "title": "Task Management App",
-        "description": "A collaborative task management application with real-time updates, team workspaces, and project tracking."
-      },
-      "3": {
-        "title": "Weather Dashboard",
-        "description": "A beautiful weather dashboard showing real-time weather data, forecasts, and interactive maps using weather APIs."
-      },
-      "4": {
-        "title": "Social Media Dashboard",
-        "description": "Analytics dashboard for social media metrics with data visualization, reports, and real-time updates."
+        "title": "CGC Placements",
+        "description": "A full-stack college placement app with real-time company visit notifications, a student dashboard with placement analytics, dynamic GPA and graduation-year eligibility filtering, secure JWT + bcrypt authentication, and a fully responsive Tailwind CSS UI."
       }
     },
     "photos": {
       "1": {
-        "title": "Mountain Trek 2024",
-        "description": "Successfully completed a challenging mountain trek in the Himalayas.",
+        "title": "Leaning Into the Wind",
+        "description": "Standing tall against a leaning coconut palm on a coastal cliff overlooking the Arabian Sea.",
         "category": "travel"
       },
       "2": {
-        "title": "Hackathon Winner",
-        "description": "Won first place at the National Web Development Hackathon.",
-        "category": "achievement"
+        "title": "Into the Light",
+        "description": "Exploring a dramatic rock cave with natural light streaming through the tunnel entrance.",
+        "category": "travel"
       },
       "3": {
-        "title": "Beach Sunset",
-        "description": "Beautiful sunset at Goa beach during a team offsite.",
+        "title": "Simple and Organic",
+        "description": "Wading through a shallow jungle river beneath the canopy of a massive spreading tree.",
         "category": "travel"
       },
       "4": {
-        "title": "Family Reunion",
-        "description": "Annual family gathering with cousins and grandparents.",
-        "category": "family"
+        "title": "Waves and Stillness",
+        "description": "Sitting on coastal rocks, watching the waves roll in under a clear blue sky.",
+        "category": "travel"
       },
       "5": {
-        "title": "Office Team Building",
-        "description": "Team building event at the Infosys campus.",
-        "category": "work"
+        "title": "Still Waters",
+        "description": "A serene mountain reservoir nestled between lush forested hills, framed by wildflowers.",
+        "category": "travel"
       },
       "6": {
-        "title": "Manali Road Trip",
-        "description": "Scenic road trip through the mountains of Himachal Pradesh.",
+        "title": "Good Vibes Cafe",
+        "description": "A cozy industrial-chic cafe with high ceilings, dome pendant lights, and lush indoor plants.",
         "category": "travel"
       },
       "7": {
-        "title": "Birthday Celebration",
-        "description": "Celebrating with close friends and family.",
-        "category": "family"
+        "title": "At the Waterfall",
+        "description": "Swimming at the base of a stunning waterfall, surrounded by rocky cliffs and lush forest.",
+        "category": "travel"
       },
       "8": {
-        "title": "Best Performer Award",
-        "description": "Recognized as the best performer in Q3 2025.",
-        "category": "achievement"
+        "title": "Golden Hour",
+        "description": "A stunning beach sunset with silhouettes of people enjoying the golden hour by the sea.",
+        "category": "travel"
+      },
+      "9": {
+        "title": "IIT Dharwad Convocation",
+        "description": "Celebrating graduation day with close friends in front of the iconic IIT Dharwad sign.",
+        "category": "family & friends"
       }
     }
   }

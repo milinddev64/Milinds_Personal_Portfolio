@@ -113,4 +113,19 @@ export interface MusicTrack {
   artist: string;
   src: string;
   cover?: string;
+  volume?: number;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  body: any; // Contentful Document (rich text) — typed loosely to avoid deep import at type layer
+  coverImage?: { url: string; title: string };
+  tags?: string[];
+  category: string;
+  publishedDate: string;
+  readTime?: number;
 }
